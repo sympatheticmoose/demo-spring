@@ -1,0 +1,14 @@
+---
+apiVersion: wego.weave.works/v1alpha1
+kind: Application
+metadata:
+  labels:
+    weave-gitops.weave.works/app-identifier: wego-7e9d93e0a77d9cd366be2766b78e4f94
+  name: demo-spring
+  namespace: wego-system
+spec:
+  branch: master
+  deployment_type: kustomize
+  path: ./
+  source_type: git
+  url: ssh://git@github.com/sympatheticmoose/demo-spring.git
